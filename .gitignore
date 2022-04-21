@@ -1,0 +1,5 @@
+*
+!.gitignore
+!README.md
+!*.tf
+!.terraform.lock.hcl
