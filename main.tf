@@ -30,3 +30,10 @@ resource "aws_route_table_association" "PublicRTassociation" {
 	subnet_id = aws_subnet.PublicSubnet.id
 	route_table_id = aws_route_table.PublicRT.id
 }
+
+#Criando Subnet Privada
+resource "aws_subnet" "PrivateSubnet" {
+	vpc_id = aws_vpc.Main.id
+	availability_zone = var.private_zone
+	cidr_block = var.private_subnet
+}

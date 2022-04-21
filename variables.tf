@@ -17,3 +17,13 @@ variable "public_subnet" {
 	description = "Segmento de rede pública"
 	default = "10.0.0.128/26"
 }
+
+variable "private_zone" {
+	description = "Zona de disponibilidade da subrede privada"
+	default = "us-east-1b"
+}
+
+variable "private_subnet" {
+	description = "Segmento de rede pública"
+	default = "10.0.0.192/26"
+}
