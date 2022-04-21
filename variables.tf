@@ -27,3 +27,23 @@ variable "private_subnet" {
 	description = "Segmento de rede pública"
 	default = "10.0.0.192/26"
 }
+
+variable "ami" {
+	description = "AWS AMI que será utilizada"
+	default = "ami-0c4f7023847b90238" #ubuntu 20.04
+}
+
+variable "instance_type" {
+	description = "Tipo de instância AWS EC2"
+	default = "t2.micro"
+}
+
+variable "name" {
+	description = "Nome do servidor"
+	default = "server01"
+}
+
+variable "env" {
+	description = "Ambiente do recurso"
+	default = "prod"
+}

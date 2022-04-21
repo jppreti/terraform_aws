@@ -63,3 +63,15 @@ resource "aws_route_table_association" "PrivateRTassociation" {
 	subnet_id = aws_subnet.PrivateSubnet.id
 	route_table_id = aws_route_table.PrivateRT.id
 }
+
+resource "aws_instance" "Server" {
+	ami = var.ami
+	instance_type = var.instance_type
+	subnet_id = aws_subnet.PublicSubnet.id
+
+	tags = {
+		Name = var.name
+		Environment = var.env
+		Provisioner = "Terraform"
+	}
+}
