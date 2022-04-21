@@ -7,3 +7,13 @@ variable "vpc_cidr" {
 	description = "Virtual Private Cloud CIDR"
 	default = "10.0.0.0/24"
 }
+
+variable "public_zone" {
+	description = "Zona de disponibilidade da subrede pública"
+	default = "us-east-1a"
+}
+
+variable "public_subnet" {
+	description = "Segmento de rede pública"
+	default = "10.0.0.128/26"
+}
