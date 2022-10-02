@@ -5,6 +5,8 @@ pkgs.mkShell {
   buildInputs = [
     pkgs.git
     pkgs.micro
+    pkgs.jq       # para filtrar arquivos json (ex.: jq .clima arquivo.json)
+    pkgs.tmux     # multiplexador para gerenciar várias sessões de terminal
     pkgs.bat
     pkgs.openvscode-server
     pkgs.awscli
